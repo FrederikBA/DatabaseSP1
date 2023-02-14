@@ -1,7 +1,3 @@
-CREATE DATABASE Library;
-
-USE Library;
-
 CREATE TABLE Book (
     ID INT PRIMARY KEY,
     Title VARCHAR(255),
@@ -37,11 +33,12 @@ CREATE TABLE Patron (
 CREATE TABLE Loan (
     ID INT PRIMARY KEY,
     Patron_ID INT,
-    Book_Magazine_ID INT,
+    Book_ID INT,
+    Magazine_ID INT,
     Loan_Date DATE,
     Due_Date DATE,
     Return_Date DATE,
     FOREIGN KEY (Patron_ID) REFERENCES Patron(ID),
-    FOREIGN KEY (Book_Magazine_ID) REFERENCES 
-    (SELECT ID FROM Book UNION ALL SELECT ID FROM Magazine) AS BM(ID)
+    FOREIGN KEY (Book_ID) REFERENCES Book(ID),
+    FOREIGN KEY (Magazine_ID) REFERENCES Magazine(ID)
 );
