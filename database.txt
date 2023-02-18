@@ -1,0 +1,65 @@
+Table Name: Book
+Columns:
+
+    ID (primary key)
+    Title
+    Author
+    ISBN
+    Publisher
+    Publication_date
+    Genre
+    Number_of_pages
+    Availability
+
+Table Name: Magazine
+Columns:
+
+    ID (primary key)
+    Title
+    Publisher
+    Publication_date
+    Genre
+    Number_of_pages
+    Availability
+
+Table Name: Patron
+Columns:
+
+    ID (primary key)
+    First_name
+    Last_name
+    Email
+    Phone_number
+    Address
+    Date_of_birth
+
+Table Name: Loan
+Columns:
+
+    ID (primary key)
+    Patron_id (foreign key)
+    Book_id (foreign key)
+    Magazine_id (foreign key)
+    Loan_date
+    Due_date
+    Return_date
+
+Book Table Data:
+ID, Title, Author, ISBN, Publisher, Publication_date, Genre, Number_of_pages, Availability
+1, 'Fifty Dead Men Walking', 'Shermy Phaup', '017943929-4', 'Viva', '1/23/2023', 'Action|Drama|Thriller', 478, 0
+2, 'Corto Maltese: Ballad of the Salt Sea (Corto Maltese - La ballade de la mer salée)', 'Jillian Chetwin', '376757179-X', 'Otcom', '11/27/2019', 'Animation', 986, 0
+
+Magazine Table Data:
+ID, Title, Publisher, Publicaton_date, Genre, Number_of_pages, Availability
+1, 'Detour', 'Prodder', '8/9/2019', 'Crime|Film-Noir', 334, 0
+2, 'Red Riding: 1974', 'Bamity', '11/22/2020', 'Crime|Drama|Mystery|Thriller', 526, 1
+
+Patron Table Data:
+ID, First_name, Last_name, Email, Phone_number, Address, Date_of_birth
+1, 'Amaleta', 'Osinin', 'aosinin0@cmu.edu', '+33 137 699 2716', '0 Kennedy Avenue', '5/1/1935'
+2, 'Mei', 'Salvin', 'msalvin1@hostgator.com', '+7 656 846 2772', '93292 Dapin Pass', '7/16/1974'
+
+Loan Table Data:
+ID, Patron_id, Book_id, Magazine_id, Loan_date, Due_date, Return_date
+1, 1, 2, 1, '4/26/2021', '12/9/2021', '2/14/2023'
+2, 2, 1, 2, '12/21/2022', '12/22/2022', '4/18/2023'
