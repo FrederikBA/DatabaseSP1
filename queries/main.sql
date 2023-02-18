@@ -22,5 +22,5 @@ EXEC sp_UpdateBooks '1,2', 'NewBookTitle';
 /* Delete StoredProcedure */
 EXEC DeleteBooksAndBookLoans @BookIdsToDelete = '1,2,3';
 
-/* Read StoredProcedure*/
+/* Read StoredProcedure */
 EXEC GetBookLoansByISBNs '294435408-6,549034588-8,798098042-5,324599895-3,395767222-8'
